@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="back-btn" slot="start">
+      <ion-menu-button style="color: white;"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Recent Reviews</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar placeholder="Search" inputmode="string" type="string" [(ngModel)]="searchText" (ionChange)="searchFilterItem()" [debounce]="250"  mode="ios"></ion-searchbar>
+  <div *ngIf="searchText" >
+    <ion-list>
+      <ion-item lines = "none" *ngFor="let item of items" (click)="itemClick(item)">
+        <ion-avatar slot="start">
+          <img [src]="item.img" />
+        </ion-avatar>
+        <p >{{item.name}}<br>
+        <span id="comp">{{item.type}}</span> <br>
+        <span>{{item.web}}</span>
+        </p>
+      </ion-item>
+    </ion-list>
+  </div>
+<div *ngIf="!searchText" >
+
+  <ion-list>
+    <ion-item lines = "none" *ngFor="let item of recentReviews" (click)="itemClick(item)">
+      <ion-avatar slot="start">
+        <img [src]="item.img" />
+      </ion-avatar>
+      <p >{{item.name}}<br>
+      <span id="comp">{{item.type}}</span> <br>
+      <span>{{item.web}}</span>
+      </p>
+    </ion-item>
+  </ion-list>
+</div>
+</ion-content>
+

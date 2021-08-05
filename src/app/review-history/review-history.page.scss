@@ -1,0 +1,108 @@
+ion-header,ion-toolbar{
+    --background: rgb(19, 25, 193);
+    ion-back-button {
+        left: 0;
+        top: 2px;
+        position: absolute;
+        color: white;
+    }
+    ion-title {
+        text-align: center;
+        color: white;
+    }
+}ion-content{
+    ion-list{
+        overflow-y: scroll;
+        height: 100%;
+        width: 100%;
+        max-height: 100%;
+        .reviews {
+            border: 1px solid grey;
+            width: 80%;
+            margin-left: 10%;
+            height: auto;
+            padding: 10px;
+            margin-top: 3%;
+            border-radius: 20px;
+            margin-bottom: 5%;
+            ion-row {
+                ion-col {
+                    ion-avatar{
+                        height: 20px;
+                        width: 20px;
+                    }
+                    ion-label {
+                        // padding: 10px !important;
+                        color: var(--ion-color-dark);
+                        max-width: 180px;
+                        overflow: hidden;
+                        text-overflow: hidden;
+                    }
+                    ion-icon {
+                        float: right;
+                        padding: 5px;
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+            
+            .title {
+                //    color: black;
+                margin-left: 5%;
+                font-size: 18px;
+                font-weight: bolder;
+            }
+            ion-label {
+                margin-left: 5%;
+            }
+        }
+        #edit-btn{
+            
+                height: 40px;
+                background-color: rgb(19, 25, 193);
+                color: white;
+                border-radius: 10px;
+                width: 80%;
+                margin-left: 10%;
+              animation: both comesUp 0.5s;
+            
+        }
+        ion-button {
+            height: 40px;
+            // background-color: rgb(19, 25, 193);
+            color: white;
+            --border-radius: 10px;
+            width: 80%;
+            margin-left: 10%;
+          animation: both comesUp 0.5s;
+        }
+        // #sub{
+        //   animation: both comesUp 0.5s;
+        // }
+    }
+}ion-input{
+    border: 1px solid grey;
+    height: 45px;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    padding: 0px 0px 0px 5px;
+
+}
+ion-textarea{
+    // margin-top: 5%;
+    border: 1px solid grey;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    padding: 5px;
+}
+@keyframes comesUp {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

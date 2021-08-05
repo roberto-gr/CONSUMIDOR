@@ -1,0 +1,90 @@
+ion-content {
+    .logo {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        img {
+            height: 130px;
+            width: 130px;
+        }
+    }
+    .main-div {
+        background: white;
+        width: 100%;
+        height: 75%;
+        bottom: 0;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        position: absolute;
+        background: rgb(19, 25, 193);
+        box-shadow: 0 2px 4px 0 var(--ion-color-dark), 0 3px 10px 0 var(--ion-color-dark);
+        ion-title {
+            text-align: center;
+            margin-top: 5%;
+            color: white;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+        .inputs-div {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 15%;
+            margin-bottom: 10%;
+            ion-input {
+                color: white;
+                border-bottom: white 1px solid;
+                margin-top: 5%;
+            }
+        }
+        ion-button {
+            width: 80%;
+            height: 40px;
+            margin-left: 10%;
+            // margin-top: 15%;
+            background-color: white;
+            color: rgb(19, 25, 193);
+            border-radius: 10px;
+            text-transform: none;
+            margin-bottom: 5%;
+        }
+        #google-btn{
+            width: 80%;
+            height: 40px;
+            margin-left: 10%;
+            // margin-top: 15%;
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+            text-transform: none;
+            ion-icon{
+                margin-left: 10px;
+            }
+        }
+        ion-row {
+            margin-top: 5%;
+            ion-col {
+                ion-label {
+                    float: right;
+                    color: white;
+                }
+            }
+        }
+        .bottom-text {
+            ion-col {
+                p {
+                    color: white;
+                    float: right;
+                }
+                ion-label {
+                    float: left;
+                    border-bottom: 1px white solid;
+                }
+            }
+        }
+    }
+}
+.vertical-center {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}

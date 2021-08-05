@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="back-btn" slot="start">
+      <ion-menu-button style="color: white;"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Directory</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar placeholder="Search" inputmode="string" type="string" [(ngModel)]="searchText" (ionChange)="searchFilterItem()" [debounce]="250"  mode="ios"></ion-searchbar>
+
+  <div *ngIf="searchText" >
+    <ion-list>
+      <ion-item lines = "none" *ngFor="let item of items" (click)="itemClick(item)">
+        <ion-avatar slot="start">
+          <img [src]="item.img" />
+        </ion-avatar>
+        <p >{{item.name}}<br>
+        <span id="comp">{{item.type}}</span> <br>
+        <span>{{item.web}}</span>
+        </p>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="!searchText" >
+    <ion-list>
+      <ion-item lines = "none" *ngFor="let item of loadeditemList" (click)="itemClick(item)">
+        <ion-avatar slot="start">
+          <img [src]="item.img" />
+        </ion-avatar>
+        <p >{{item.name}}<br>
+        <span id="comp">{{item.type}}</span> <br>
+        <span>{{item.web}}</span>
+        </p>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>
+

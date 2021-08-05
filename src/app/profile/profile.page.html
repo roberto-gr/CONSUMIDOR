@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="back-btn" slot="start">
+      <ion-menu-button style="color: white;"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-avatar>
+    <img src="../../assets/images/placeholder.png" />
+  </ion-avatar>
+  <div>
+    <ion-label>{{userData.fname}} {{userData.lname}}</ion-label>
+  </div>
+  <ion-item lines = "full" class="vertical-center" style="--background: transparent; width: 80%; margin: 5% 10% 0 10%;">
+    <ion-icon slot="start" name="moon"></ion-icon>
+    <ion-label>{{'Dark Mode'}}</ion-label>
+    <ion-toggle slot="end"  (click)="darkMode()" ></ion-toggle>
+  </ion-item>
+
+ <div class="bottom-btns">
+    <ion-button (click)="reviewHistory()" fill="clear" shape="round">
+        Review history
+      </ion-button>
+      <ion-button (click)="logout()" fill="clear" shape="round">
+        Logout
+      </ion-button>
+ </div>
+</ion-content>

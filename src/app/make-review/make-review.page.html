@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="back-btn" slot="start">
+      <ion-button (click)="back()">
+        <ion-icon style="color: white;" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Make a review</ion-title>
+  </ion-toolbar>
+  </ion-header>
+<ion-content>
+<ion-label class="title">Make a review for:</ion-label>
+<ion-avatar>
+  <img [src]="data.img" />
+</ion-avatar>
+<ion-row class="company-info">
+  <ion-col size="5">
+    <ion-label>{{data.name}}</ion-label>
+  </ion-col>
+  <ion-col size="5">
+    <ion-label>{{data.type}}</ion-label>
+  </ion-col>
+</ion-row>
+<ion-row class="company-info">
+  <ion-col size="5">
+    <ion-label>{{data.web}}</ion-label>
+  </ion-col>
+  <ion-col size="5">
+    <ion-label>{{data.phone}}</ion-label>
+  </ion-col>
+</ion-row>
+<rating
+size="default"
+(ngModelChange)="onModelChange($event)" [(ngModel)]="rating">
+</rating>
+<div class="inputs">
+  <ion-input type="text" placeholder="subject"[(ngModel)]="sub"></ion-input>
+</div>
+<ion-textarea [(ngModel)]="comment" placeholder="comments" cols="30" rows="10"></ion-textarea>
+<ion-button (click)="onSubmit()" fill="clear" shape="round" class="bottom-button">
+  submit
+</ion-button>
+</ion-content>

@@ -1,0 +1,38 @@
+ion-header,ion-toolbar{
+    --background: rgb(19, 25, 193);
+    ion-title {
+        text-align: center;
+        color: white;
+    }
+}
+ion-content {
+    ion-searchbar{
+        width: 90%;
+        margin-left: 5%;
+    }
+   ion-list{
+       ion-item{
+           margin: 0;
+           ion-avatar{
+               img{
+
+               }
+           }p{
+               border-bottom: 1px solid lightgrey;
+               padding-bottom: 5px;
+               width: 100%;
+               span{
+                   color: lightgrey;
+                   font-size: 12px;
+                   padding: 2px 0 2px 0;
+                   text-overflow: hidden;
+                   overflow: hidden;
+               }
+               #comp{
+                font-size: 14px;
+                color: var(--ion-color-dark) !important;
+            }
+           }
+       }
+   }
+}

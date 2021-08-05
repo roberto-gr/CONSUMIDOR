@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="back-btn" slot="start">
+      <ion-button (click)="back()">
+        <ion-icon style="color: white;" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Reviews History</ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+<ion-list>
+  <div *ngFor="let item of reviews; let i = index;">
+    <div class="reviews">
+      <ion-row>
+        <ion-col class="vertical-center" size="11">
+          <ion-avatar>
+            <img src="../../assets/images/placeholder.png" />
+          </ion-avatar>
+          <ion-label>{{item.name}}</ion-label>
+        </ion-col>
+        <ion-col size="1">
+          <!-- <img src="../../assets/share.svg"> -->
+          <ion-icon (click)="screenShotURI()" name="share-social"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <rating [hidden] = "i === itemIndex && edit === true" id="contact-rating"
+        size="default"
+        [readonly] = "true"
+        [rate] = "item.rating"
+        (ngModelChange)="onModelChange($event)"
+      >
+      </rating>
+      <rating *ngIf="edit && i === itemIndex" id="contact-rating"
+        size="default"
+        [(ngModel)]="rating"
+        (ngModelChange)="onModelChange($event)"
+      >
+      </rating>
+      <ion-input *ngIf="edit && i === itemIndex"  type="text" placeholder = "Subject" [(ngModel)]="sub"></ion-input>
+      <ion-label [hidden] = "i === itemIndex && edit === true"  class="title">{{item.subject}}</ion-label><br [hidden] = "i === itemIndex && edit === true"><br [hidden] = "i === itemIndex && edit === true">
+      <ion-textarea *ngIf="edit && i === itemIndex" type="text" placeholder = "Comment" [(ngModel)]="comment"></ion-textarea>
+      <ion-label [hidden] = "i === itemIndex && edit === true">{{item.comment}}</ion-label>
+    </div>
+    <ion-button id="edit-btn" fill = "clear" [hidden] = "i === itemIndex && edit === true" (click)="editReview(i)">
+      Edit Review
+    </ion-button>
+    
+    <ion-button id="sub"color="success"  *ngIf="edit && i === itemIndex"  (click)="submit(i,item)">
+      Submit
+    </ion-button>
+
+    <ion-button  color="danger" *ngIf="edit && i === itemIndex" (click)="cancel(i)">
+      Cancel
+    </ion-button>
+  </div>
+</ion-list>
+</ion-content>

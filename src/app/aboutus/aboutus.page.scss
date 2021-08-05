@@ -1,0 +1,28 @@
+ion-header,ion-toolbar{
+    --background: rgb(19, 25, 193);
+    ion-back-button {
+        left: 0;
+        top: 2px;
+        position: absolute;
+        color: white;
+    }
+    ion-title {
+        text-align: center;
+        color: white;
+    }
+}
+ion-content {
+    .info{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 15%;
+        p{
+
+        }
+    }
+}
+.vertical-center {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}

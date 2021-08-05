@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "628397141369",
+    "firebase_url": "https://consumidor-rd-7574b-default-rtdb.firebaseio.com",
+    "project_id": "consumidor-rd-7574b",
+    "storage_bucket": "consumidor-rd-7574b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628397141369:android:62611193ec69690205d3a8",
+        "android_client_info": {
+          "package_name": "com.proyecto.consumidor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628397141369-dslr0fjjkffedlv58jnjuni5peckbdmv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.proyecto.consumidor",
+            "certificate_hash": "3efd5401bc678c5e9abd8b6e675ac62a2d3f3535"
+          }
+        },
+        {
+          "client_id": "628397141369-9p1egshd47aifm59q5mjft0eduer8u3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEjYxFF9qHtIraCzajbT4qCVrXKoi6Z1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628397141369-9p1egshd47aifm59q5mjft0eduer8u3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
